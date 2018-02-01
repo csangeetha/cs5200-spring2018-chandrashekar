@@ -16,7 +16,6 @@ extends SpringBootServletInitializer {
 		return application.sources(
 				Cs5200Spring2018ChandrashekarApplication.class);
 	}
-
 	public static void main(String[] args) {
 		SpringApplication
 		.run(Cs5200Spring2018ChandrashekarApplication.class, args);
