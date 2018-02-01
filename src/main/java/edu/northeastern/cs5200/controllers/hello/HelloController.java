@@ -20,6 +20,7 @@ public class HelloController {
 		HelloObject obj = new HelloObject("Hello Sangeetha Chandrashekar!");
 		return obj;
 	}
+	
 	@Autowired
 	HelloRepository helloRepository;
 	@RequestMapping("/api/hello/insert")
@@ -28,12 +29,14 @@ public class HelloController {
 		helloRepository.save(obj);
 		return obj;
 	}
+	
 	@RequestMapping("/api/hello/insert/{msg}")
 	public HelloObject insertMessage(@PathVariable("msg") String message) {
 		HelloObject obj = new HelloObject(message);
 		helloRepository.save(obj);
 		return obj;
 	}
+	
 	@RequestMapping("/api/hello/select/all")
 	public List<HelloObject> selectAllHelloObjects() {
 		List<HelloObject> hellos = (List<HelloObject>)helloRepository.findAll();

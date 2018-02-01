@@ -9,6 +9,7 @@ public class HelloObject {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
+	
 	public int getId() {
 		return id;
 	}
